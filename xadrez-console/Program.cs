@@ -7,12 +7,20 @@ namespace xadrez_console
     {
         static void Main(string[] args)
         {
-            Tabuleiro tab = new Tabuleiro(8, 8);
+            try
+            {
+                Tabuleiro tab = new Tabuleiro(8, 8);
 
-            tab.colocarPecas(new Torre(tab, Cor.Preta), new Posicao(0, 0));
-            tab.colocarPecas(new Rei(tab, Cor.Branca), new Posicao(7, 0));
+                tab.colocarPecas(new Torre(tab, Cor.Preta), new Posicao(0, 0));
+                tab.colocarPecas(new Rei(tab, Cor.Branca), new Posicao(7, 0));
+                tab.colocarPecas(new Torre(tab, Cor.Branca), new Posicao(2, 9));
 
-            Tela.imprimirTabuleiro(tab);
+                Tela.imprimirTabuleiro(tab);
+            }
+            catch (TabuleiroException e) 
+            {
+                Console.WriteLine(e.Message);
+            }
 
             Console.ReadLine();
         }
