@@ -13,7 +13,7 @@ namespace xadrez_console
 
                 tab.colocarPecas(new Torre(tab, Cor.Preta), new Posicao(0, 0));
                 tab.colocarPecas(new Rei(tab, Cor.Branca), new Posicao(7, 0));
-                tab.colocarPecas(new Torre(tab, Cor.Branca), new Posicao(2, 9));
+                tab.colocarPecas(new Torre(tab, Cor.Branca), new Posicao(2, 7));
 
                 Tela.imprimirTabuleiro(tab);
             }
